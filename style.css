@@ -3,8 +3,8 @@ body {
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
-  color: #125140;
-  background-color: #fff7ec;
+  color: #005844;
+  background-color: rgba(252, 232, 206, 1);
   padding: 0;
   margin: 0;
 }
@@ -16,27 +16,12 @@ header {
   right: 0;
   overflow: hidden;
   text-align: center;
-
   z-index: 1;
 }
 
-nav {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  top: 46vh;
-}
-
-nav a {
-  font-size: 1em;
-  color: #125140;
-  text-decoration: none;
-  transform: rotate(90deg);
-  z-index: 2
-}
-
 a {
+  color: #005844;
+  text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
@@ -46,73 +31,100 @@ header h1 {
   text-align: center;
   width: 100%;
   margin-top: 45px;
-  font-size: 1.5em;
+  font-size: 19px;
   font-weight: normal;
   text-decoration: none;
-  color: #125140;
+  color: #005844;
 }
 
 header img {
-  width: 10%;
+  width: 120px;
   position: fixed;
   right: 50px;
   top: 53px;
 }
 
-.main {
+section {
+  text-align: center;
+}
+
+.intro {
   width: 100%;
   height: 100%;
 }
 
-.about {
+.info {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 12vh;
-  width: 47vw;
-  z-index: 2;
+  width: 49vw;
 }
 
-.opener {
-  margin-top: 150px;
-  text-align: center;
-  z-index: 2;
+.hero {
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.hero img {
+  width: 75vw;
+}
+
+.icon img {
+  width: 3%;
+}
+
+.copy,
+.why {
+  margin-left: auto;
+  margin-right: auto;
+  width: 47vw;
+}
+
+.hero img {
+
+}
+
+.hours {
+  margin-top: 50px;
 }
 
 .contact {
-  text-align: center;
-  margin-bottom: -100px;
-  z-index: 3;
+  margin-bottom: 183px;
+  font-size: 14px;
 }
 
-.contact a {
-  color: #125140;
-  text-decoration: none;
-  z-index: 3;
+.instagram svg {
+  width: 1.6%;
 }
 
-.image {
-  background-image: url(Images/illustration1.svg);
-  background-size: 28%;
-  background-repeat: no-repeat;
-  padding-top: 250px;
-  padding-bottom: 250px;
-  position: relative;
-  top: -70px;
-  right: -68vw;
-  -webkit-transform: rotate(-5deg);
-  -moz-transform: rotate(-5deg);
+.instagram svg:hover .st1 {
+  fill: #ff7c76;
 }
 
-.illustration {
-  background-image: url(Images/illustration2.svg);
-  background-size: 24vw;
-  background-repeat: no-repeat;
-  padding-top: 215px;
-  padding-bottom: 225px;
-  position: relative;
-  left: 9vw;
-  top: -160px;
+.instagram svg:hover .st2 {
+  stroke: #ff7c76;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
 }
 
 footer {
@@ -121,108 +133,88 @@ footer {
   bottom: 10px;
   text-align: center;
   margin-bottom: 12px;
-  z-index: 2;
+}
+
+footer img {
+  width: 25px;
+  position: fixed;
+  left: 90px;
+  bottom: 22px;
 }
 
 footer a {
-  color: #125140;
+  color: #005844;
   text-decoration: none;
 }
 
-/**Tablet Version**/
-@media (max-width: 800px) {
-  header img {
-    width: 16%;
-    right: 45px;
-    top: 60px;
+footer a:hover,
+.hours a:hover {
+  color: #ff7c76;
 }
 
-  .about {
-    margin-top: 0vh;
-    width: 68vw;
-}
-
-  .image {
-    right: 0vw;
-    padding-top: 100px;
-    padding-bottom: 190px;
-}
-
-.illustration {
-  left: 0vw;
-  padding-top: 180px;
-  padding-bottom: 55px;
-}
-
-  .contact {
-    margin-bottom: 100px;
-  }
-
-  .opener {
-    margin-top: 115px;
-
-}
-
-}
-
-/**Iphone**/
 @media (max-width: 465.5px) {
   body {
-    font-size: 12px;
-    line-height: 1.8;
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  header {
+    height: 206px;
   }
 
   header h1 {
-    margin-top: 30px;
+    margin-top: 36px;
   }
 
   header img {
-    position: absolute;
-    width: 30%;
-    right: 130px;
-    top: 1040px;
+    margin-top: 50px;
+    margin-left: 90px;
+    width: 105px;
+    position: relative;
   }
 
-  .opener {
-    margin-top: 235px;
+  .info {
+    margin-top: 35px;
+    width: 81%;
+  }
+
+  .hero {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+
+  .hero img {
+    width: 85%;
+  }
+
+  .icon img {
+    width: 9%;
+  }
+
+  .copy, .why {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .instagram svg {
+    width: 7%;
+    padding-bottom: 10px;
   }
 
   .contact {
-    margin-bottom: 120px;
-  }
-
-  .contact a {
-    color: #125140;
-    text-decoration: none;
-  }
-
-  .image {
-    background-size: 23%;
-    background-position: center;
-    padding-top: 60px;
-    padding-bottom: 81px;
-    position: relative;
-    top: -403px;
-    right: 0px;
-  }
-
-  .illustration {
-    background-size: 32%;
-    padding-top: 100px;
-    background-position: center;
-    padding-bottom: 90px;
-    position: relative;
-    left: 3px;
-    top: -555px;
+    margin-bottom: 163px;
   }
 
   footer {
-    font-size: .9em;
-    bottom: 10px;
+    font-size: 12.5px;
+    position: relative;
   }
 
-  footer a {
-    color: #125140;
-    text-decoration: none;
+  footer img {
+    width: 25px;
+    position: fixed;
+    left: 155px;
+    bottom: 55px;
   }
 }
